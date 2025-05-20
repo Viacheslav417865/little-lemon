@@ -1,38 +1,126 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+main {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+form > div {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* App.css */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: #ffe5b4;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main {
+  grid-area: main;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #d4edda;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cta {
+  background-color: #f4ce14;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cta button {
+  font-size: 1.2rem;
+  background-color: #495e57;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
 }
